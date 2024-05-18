@@ -1,51 +1,71 @@
 import { motion } from "framer-motion";
 import { RxCross2 } from "react-icons/rx";
 import { RiInstagramFill } from "react-icons/ri";
-import { FaLinkedin } from "react-icons/fa6";
-import { FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa6";
 
+const MobileNavbar = ({ onClose }) => {
+    const links = [
+        { name: "Home", path: "/" },
+        { name: "About", path: "/about" },
+        { name: "Project", path: "/projects" },
+        { name: "Skills", path: "/skills" },
+    ];
 
-const MobileNavbar = () => {
+    const socialLinks = [
+        { name: "Instagram", icon: RiInstagramFill, url: "https://www.instagram.com" },
+        { name: "LinkedIn", icon: FaLinkedin, url: "https://www.linkedin.com" },
+        { name: "GitHub", icon: FaGithub, url: "https://www.github.com" },
+    ];
 
     return (
-        <motion.div initial={{y:-100}} animate={{y:0 }} transition={{duration: 0.5}} className="md:hidden h-[100vh] right-0 top-0  w-full absolute bg-white">
-            <div className="flex flex-col justify-between h-full p-10">
-            <div className="flex justify-between ">
-                <div className="flex flex-col  text-black  gap-5">
-                    <div className="overflow-hidden">
-                        <motion.a initial={{y : "100%"}} animate={{y : "0"}} transition={{duration : 0.1, type : "spring", stiffness : 75} }  className="text-4xl font-Primary" href="">Home</motion.a>
+        <motion.div
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="md:hidden h-[100vh] right-0 top-0 w-full absolute bg-white p-10 z-50"
+        >
+            <div className="flex flex-col justify-between h-full">
+                <div className="flex justify-between">
+                    <div className="flex flex-col text-black gap-5">
+                        {links.map((link, index) => (
+                            <div key={link.name} className="overflow-hidden">
+                                <motion.a
+                                    initial={{ y: "100%" }}
+                                    animate={{ y: "0" }}
+                                    transition={{ duration: 0.1 * (index + 1), type: "spring", stiffness: 75 }}
+                                    className="text-4xl font-Primary"
+                                    href={link.path}
+                                    onClick={onClose}
+                                >
+                                    {link.name}
+                                </motion.a>
+                            </div>
+                        ))}
                     </div>
-                    <div className="overflow-hidden ">
-                        <motion.a initial = {{y: "100%"}} animate ={{y: "0"}} className="text-4xl font-Primary" href="">About</motion.a>
-                    </div>
-                    <div className="overflow-hidden">
-                        <motion.a initial = {{y: 100}} animate ={{y: 0}} className="text-4xl font-Primary" href="">Project</motion.a>
-                    </div>
-                    <div className="overflow-hidden">
-                        <motion.a initial = {{y: 100}} animate ={{y: 0}} className="text-4xl font-Primary" href="">Skills</motion.a>
+                    <div
+                        className="text-black p-3 border-[1.5px] rounded-full cursor-pointer"
+                        onClick={onClose}
+                    >
+                        <RxCross2 size={30} aria-label="Close Menu" />
                     </div>
                 </div>
-                <div className="text-black p-3 border-[1.5px] rounded-full">
-                    <RxCross2 size={30}/>
+                <div className="flex flex-col gap-4">
+                    {socialLinks.map((social) => (
+                        <a
+                            key={social.name}
+                            href={social.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-black"
+                        >
+                            <social.icon size={20} aria-label={social.name} />
+                            <h1 className="underline capitalize">{social.name}</h1>
+                        </a>
+                    ))}
                 </div>
-            </div>
-            <div>
-                <div className="flex items-center gap-2 text-black">
-                    < RiInstagramFill size={20} />
-                    <h1 className=" underline capitalize">instagram</h1>
-                </div>
-                <div className="flex items-center gap-2 text-black">
-                    <FaLinkedin size={20} />
-                    <h1 className=" underline capitalize">linkedin</h1>
-                </div>
-                <div className="flex items-center gap-2 text-black">
-                    <FaGithub size={20}/>
-                    <h1 className=" underline capitalize">github</h1>
-                </div>
-            </div>
             </div>
         </motion.div>
-    )
-}
+    );
+};
 
 export default MobileNavbar;

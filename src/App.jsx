@@ -1,4 +1,3 @@
-// import About from "./components/About"
 import LandingPage from "./components/LandingPage"
 import Navbar from "./components/Navbar";
 import LocomotiveScroll from 'locomotive-scroll';
@@ -13,7 +12,7 @@ function App() {
   const locomotiveScroll = new LocomotiveScroll();
 
   return (
-    <div className="w-full h-min-screen bg-zinc-900 text-white">
+    <div className="w-full h-min-[100vh]  bg-zinc-900 text-white">
       <Navbar/>
       <LandingPage/>
       <Skills/>
