@@ -46,7 +46,7 @@ const Navbar = () => {
                 <IoMdMenu size={30} />
             </div>
             {open && (
-                <MobileNavbar open={open} setopen={setOpen}/>
+                <MobileNavbar />
             )}
             <div className="hidden md:flex items-cente gap-5">
             {pages.map((page) => {
