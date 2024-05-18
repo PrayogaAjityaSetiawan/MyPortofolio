@@ -12,9 +12,9 @@ const MobileNavbar = ({ onClose }) => {
     ];
 
     const socialLinks = [
-        { name: "Instagram", icon: RiInstagramFill, url: "https://www.instagram.com" },
-        { name: "LinkedIn", icon: FaLinkedin, url: "https://www.linkedin.com" },
-        { name: "GitHub", icon: FaGithub, url: "https://www.github.com" },
+        { name: "Instagram", icon: RiInstagramFill, url: "https://www.instagram.com/prayogaajitya/" },
+        { name: "LinkedIn", icon: FaLinkedin, url: "https://www.linkedin.com/in/prayoga-ajitya-setiawan-0229091a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+        { name: "GitHub", icon: FaGithub, url: "https://github.com/PrayogaAjityaSetiawan" },
     ];
 
     return (

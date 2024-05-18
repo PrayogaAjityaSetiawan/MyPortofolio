@@ -17,6 +17,7 @@ function App() {
       const locomotiveScroll = new LocomotiveScroll({
         el: scrollRef.current,
         smooth: true,
+        smoothMobile: true,
       });
 
       return () => {
