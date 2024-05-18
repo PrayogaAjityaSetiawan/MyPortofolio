@@ -4,7 +4,7 @@ import foto from "../assets/foto.jpg"
 
 const LandingPage = () => {
     return (
-        <div data-scroll data-scroll-section data-scroll-speed="-.3" className=" w-full h-[100vh]  
+        <div data-scroll data-scroll-section data-scroll-speed="-.3" className=" w-full h-[100dvh]  
         bg-zinc-900 text-white pt-2">
             <div className="mt-52 md:mt-52 flex flex-col justify-center items-center font-Primary">
                 <div className="w-fit flex items-center h-1/3 overflow-hidden">
