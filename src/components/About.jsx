@@ -4,7 +4,7 @@ const About = () => {
     return (
             <div data-scroll data-scroll-section data-scroll-speed=".1"  className=" bg-[#CDEA68] rounded-tl-2xl rounded-tr-2xl md:h-screen ">
                 <div className="py-10 mx-5 md:mx-20 text-black">
-                    <h1 className="text-4xl font-Primary leading-normal"> Prayoga Ajitya Setiawan, a 4nd semester student of Informatics Engineering Budi Luhur University,<span className="underline decoration-wavy decoration-lime-50">I am from Lamongan, East Java,</span>  and now living in Jakarta I want to become a <span className="underline decoration-wavy decoration-[#004D43]">frondend programmer.</span></h1>
+                    <h1 className="text-2xl md:text-4xl  font-Primary leading-normal"> Prayoga Ajitya Setiawan, a 4nd semester student of Informatics Engineering Budi Luhur University,<span className="underline decoration-wavy decoration-lime-50">I am from Lamongan, East Java,</span>  and now living in Jakarta I want to become a <span className="underline decoration-wavy decoration-[#004D43]">frondend programmer.</span></h1>
                 </div>
                 <div className="border-t-[1px] font-Primary  py-10 border-white">
                     <div className="flex flex-col md:flex-row md:items-center gap-5 ">

@@ -1,6 +1,7 @@
 import card1 from "../assets/Meal Express.webp"
 import Bookshelf from "../assets/Bookshelf.png"
 import Weather from "../assets/Weather.png"
+import { GoArrowUpRight } from "react-icons/go";
 const Information = ()=> {
     return (
         <div   className=" bg-[#CDEA68] min-h-screen rounded-tr-xl rounded-tl-xl">
@@ -9,20 +10,23 @@ const Information = ()=> {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div className=" bg-white overflow-hidden rounded-2xl ">
                     <img className="bg-cover bg-center" src={card1} alt="" />
-                    <div className="p-5">
-                        <h1 className=" font-Primary capitalize text-3xl text-zinc-700 ">meal express</h1>
+                    <div className="flex gap-2 items-center p-5 text-zinc-700">
+                        <a href="https://prayogaajityasetiawan.github.io/Website_Menu.github.io/" target="_blank" className=" font-Primary capitalize text-3xl ">meal express</a>
+                        <GoArrowUpRight size={30} />
                     </div>
                 </div>
                 <div className=" bg-white overflow-hidden rounded-2xl ">
                     <img className="bg-cover bg-center" src={Bookshelf} alt="" />
-                    <div className="flex justify-between items-center  p-5">
-                        <h1 className=" font-Primary capitalize text-3xl text-zinc-700 ">Bookshelf app</h1>
+                    <div className="flex gap-2 items-center p-5 text-zinc-700">
+                        <a href="https://prayogaajityasetiawan.github.io/Website_Menu.github.io/" target="_blank" className=" font-Primary capitalize text-3xl ">bookshelf app</a>
+                        <GoArrowUpRight size={30} />
                     </div>
                 </div>
                 <div className=" bg-white overflow-hidden rounded-2xl ">
                     <img className="bg-cover bg-center" src={Weather} alt="" />
-                    <div className="p-5">
-                        <h1 className=" font-Primary capitalize text-3xl text-zinc-700 ">weather app</h1>
+                    <div className="flex gap-2 items-center p-5 text-zinc-700">
+                        <a href="https://prayogaajityasetiawan.github.io/Website_Menu.github.io/" target="_blank" className=" font-Primary capitalize text-3xl ">weather app</a>
+                        <GoArrowUpRight size={30} />
                     </div>
                 </div>
                
