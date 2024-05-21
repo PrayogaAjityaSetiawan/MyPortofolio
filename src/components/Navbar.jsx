@@ -3,9 +3,7 @@ import { useEffect, useState } from "react"
 import { IoMdMenu } from "react-icons/io";
 import MobileNavbar from "./MobileNavbar";
 const Navbar = () => {
-    
     const [open, setOpen] = useState(false)
-    console.log(open)
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -18,26 +16,10 @@ const Navbar = () => {
     },[])
 
     const pages = [
-        {
-            id : 1,
-            name : "Home",
-            path : "/"
-        },
-        {
-            id : 2,
-            name : "About",
-            path : "/"
-        },
-        {
-            id : 3,
-            name : "Project",
-            path : "/"
-        },
-        {
-            id : 4,
-            name : "Skills",
-            path : "/"
-        },
+        { id : 1, name : "Home", path : "/"},
+        { id : 2, name : "About", path : "/"},
+        { id : 3, name : "Project", path : "/"},
+        { id : 4, name : "Skills", path : "/"},
     ]
     return (
         <motion.nav initial={{y : "-100%"}} animate={{y : "0"}} transition={{duration : 0.5, type : "spring", stiffness : 75}} className=" py-4 px-5 md:px-20 fixed z-[999] w-full flex justify-between items-center font-Primary ">

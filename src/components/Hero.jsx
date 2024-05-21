@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
 import { FaArrowDownLong } from "react-icons/fa6";
 import foto from "../assets/foto.jpg";
+import Button from "./Elements/Button/Button";
+const Hero = () => {
 
-const LandingPage = () => {
     return (
         <div
             data-scroll
             data-scroll-section
             data-scroll-speed="-.3"
-            className="w-full min-h-[100vh] bg-zinc-900 text-white pt-2"
+            className=" w-full min-h-[100vh] bg-zinc-900 text-white pt-2"
+           
         >
             <div className="mt-52 md:mt-52 flex flex-col justify-center items-center font-Primary">
                 <div className="w-fit flex items-center h-1/3 overflow-hidden">
@@ -48,9 +50,7 @@ const LandingPage = () => {
                     <h1>Get to know more closely</h1>
                     <h1>About Me</h1>
                     <div className="flex gap-2">
-                        <div className="py-2 px-4 border-[1px] border-zinc-700 rounded-full">
-                            <p>Scroll Down</p>
-                        </div>
+                        <Button>Know More</Button>
                         <motion.div
                             whileHover={{
                                 backgroundColor: "white",
@@ -74,4 +74,4 @@ const LandingPage = () => {
     );
 };
 
-export default LandingPage;
+export default Hero;

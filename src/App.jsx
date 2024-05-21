@@ -1,13 +1,13 @@
 import { useEffect, useRef } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 import "../node_modules/locomotive-scroll/dist/locomotive-scroll.css";
-import LandingPage from "./components/LandingPage";
 import Navbar from "./components/Navbar";
-import Skills from "./components/Skills";
 import About from "./components/About";
-import Contact from "./components/Contact";
-import Lain from "./components/Lain";
-import Information from "./components/information";
+import Quotes from "./components/Quotes";
+import Project from "./components/Project";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import Marquee from "./components/Marquee";
 
 function App() {
   const scrollRef = useRef(null);
@@ -27,14 +27,14 @@ function App() {
   }, []);
 
   return (
-    <div ref={scrollRef} className="w-full h-min-[100vh] bg-zinc-900 text-white" data-scroll-container>
+    <div ref={scrollRef} className="w-full h-min-[100vh] bg-zinc-900 text-white " data-scroll-container>
       <Navbar />
-      <LandingPage />
-      <Skills />
+      <Hero />
+      <Marquee />
       <About />
-      <Contact />
-      <Information/>
-      <Lain />
+      <Quotes />
+      <Project/>
+      <Footer />
     </div>
   );
 }

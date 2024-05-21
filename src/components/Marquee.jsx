@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const Skills = () => {
+const Marquee = () => {
     return (
         <div 
             data-scroll 
@@ -30,4 +30,4 @@ const Skills = () => {
     );
 };
 
-export default Skills;
+export default Marquee;
