@@ -6,14 +6,12 @@ const Navbar = () => {
     const [open, setOpen] = useState(false)
 
     useEffect(() => {
-        window.addEventListener("scroll", () => {
             if (window.scrollY > 0) {
-                document.querySelector("nav").classList.add("backdrop-blur-sm")
+                document.querySelector(".header").classList.add("backdrop-blur-sm");
             } else {
-                document.querySelector("nav").classList.remove("backdrop-blur-sm")
+                document.querySelector(".header").classList.remove("backdrop-blur-sm");
             }
-        })
-    },[])
+    }, []);
 
     const pages = [
         { id : 1, name : "Home", path : "/"},
@@ -22,22 +20,28 @@ const Navbar = () => {
         { id : 4, name : "Skills", path : "/"},
     ]
     return (
-        <motion.nav initial={{y : "-100%"}} animate={{y : "0"}} transition={{duration : 0.5, type : "spring", stiffness : 75}} className=" py-4 px-5 md:px-20 fixed z-[999] w-full flex justify-between items-center font-Primary ">
-            <h1 className="text-xl font-bold">Prayoga</h1>
-            <div onClick={() => setOpen(!open)}  className="md:hidden p-3 bg-[#004D43] rounded-full">
-                <IoMdMenu size={30} />
-            </div>
-            {open && (
-                <MobileNavbar onClose={() => setOpen(false)} />
-            )}
-            <div className="hidden md:flex items-cente gap-5">
-            {pages.map((page) => {
-                return (
-                    <a href="" key={page.id} >{page.name}</a>
-                )
-            })}
-            </div>
-        </motion.nav>
+            <motion.nav 
+            initial={{y : "-100%"}} 
+            animate={{y : "0"}} 
+            transition={{duration : 0.5, type : "spring", stiffness : 75}} 
+            className="mt-0 md:mt-3 md:px-20 z-[999]  w-full font-Primary fixed">
+                <div className="header flex justify-between items-center mx-auto md:w-[80%] py-4 px-5 bg-[#CDEA68] rounded-lg ">
+                    <h1 className="text-xl font-bold text-zinc-900">Prayoga</h1>
+                    <div onClick={() => setOpen(!open)}  className="md:hidden p-3 bg-[#004D43] rounded-full">
+                        <IoMdMenu size={30} />
+                    </div>
+                {open && (
+                    <MobileNavbar onClose={() => setOpen(false)} />
+                )}
+                <div className="hidden md:flex items-cente gap-5">
+                {pages.map((page) => {
+                    return (
+                        <motion.a  className="text-zinc-900  rounded-full" href="" key={page.id} >{page.name}</motion.a>
+                    )
+                })}
+                </div>
+                </div>
+            </motion.nav>
         
     )
 }

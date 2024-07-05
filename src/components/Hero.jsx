@@ -9,7 +9,7 @@ const Hero = () => {
             data-scroll
             data-scroll-section
             data-scroll-speed="-.3"
-            className=" w-full min-h-[100vh] bg-zinc-900 text-white pt-2"
+            className=" relative w-full max-h-[100vh] bg-[#F1F1F1] text-zinc-900 py-2"
            
         >
             <div className="mt-52 md:mt-52 flex flex-col justify-center items-center font-Primary">
@@ -49,7 +49,7 @@ const Hero = () => {
                 <div className="mt-5 mx-5 md:mx-20 flex flex-col gap-5 items-start md:flex-row md:justify-between md:items-center">
                     <h1>Get to know more closely</h1>
                     <h1>About Me</h1>
-                    <div className="flex gap-2">
+                    <div className="z-10 flex gap-2">
                         <Button>Know More</Button>
                         <motion.div
                             whileHover={{
@@ -70,6 +70,8 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
+            <div className="absolute top-0 w-[200px] h-[200px] bg-[#CDEA68] rounded-full blur-[100px]"></div>
+            <div className="absolute bottom-0 right-0 w-[200px] h-[200px] bg-[#CDEA68] rounded-full blur-[100px]"></div>
         </div>
     );
 };
