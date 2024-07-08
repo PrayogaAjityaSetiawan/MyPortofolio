@@ -37,7 +37,7 @@ const Card = () => {
         <div>
             {cards.map(card => (
                 <div key={card.id} className="w-full">
-                    <div className="flex flex-col gap-5 md:gap-0 md:flex-row items-center py-3 group hover:bg-[#004D43] font-Primary ">
+                    <div className="flex flex-col gap-5 md:gap-0 md:flex-row items-center py-5 md:py-3 group hover:bg-[#004D43] font-Primary ">
                     <div className="w-full md:w-[30%]">
                         <img className="bg-cover bg-center md:w-[300px] " loading="lazy" src={card.image} alt={card.name} />
                     </div>

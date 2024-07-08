@@ -2,6 +2,7 @@ import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 import { IoMdMenu } from "react-icons/io";
 import MobileNavbar from "./MobileNavbar";
+import icon from '../assets/icon_nav.jpeg'
 const Navbar = () => {
     const [open, setOpen] = useState(false)
 
@@ -25,7 +26,7 @@ const Navbar = () => {
         { id : 1, name : "Home", path : "/"},
         { id : 2, name : "About", path : "/"},
         { id : 3, name : "Project", path : "/"},
-        { id : 4, name : "Skills", path : "/"},
+        { id : 4, name : "Contact", path : "/"},
     ]
     return (
             <motion.nav 
@@ -34,8 +35,8 @@ const Navbar = () => {
             transition={{duration : 0.5, type : "spring", stiffness : 75}} 
             className="mt-0 md:mt-3 md:px-20 z-[999]  w-full font-Primary fixed">
                 <div className="header flex justify-between items-center mx-auto md:w-[80%] py-4 px-5 rounded-lg ">
-                    <h1 className="text-xl font-bold text-zinc-900">Prayoga</h1>
-                    <div onClick={() => setOpen(!open)}  className="md:hidden p-3 bg-[#004D43] rounded-full">
+                    <img className="w-10 rounded-full" src={icon} alt="" />
+                    <div onClick={() => setOpen(!open)}  className="md:hidden p-3 rounded-full">
                         <IoMdMenu size={30} />
                     </div>
                 {open && (
@@ -43,8 +44,9 @@ const Navbar = () => {
                 )}
                 <div className="hidden md:flex items-cente gap-5">
                 {pages.map((page) => {
+                    const { id, name } = page
                     return (
-                        <motion.a  className="text-zinc-900  rounded-full" href="" key={page.id} >{page.name}</motion.a>
+                        <motion.a  className="text-zinc-900  rounded-full" href="" key={id} >{name}</motion.a>
                     )
                 })}
                 </div>

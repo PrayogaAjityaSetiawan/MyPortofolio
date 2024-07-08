@@ -4,11 +4,12 @@ import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedin, FaGithub } from "react-icons/fa6";
 
 const MobileNavbar = ({ onClose }) => {
+    
     const links = [
         { name: "Home", path: "/" },
         { name: "About", path: "/about" },
         { name: "Project", path: "/projects" },
-        { name: "Skills", path: "/skills" },
+        { name: "Contact", path: "/skills" },
     ];
 
     const socialLinks = [
