@@ -5,7 +5,7 @@ import Button from "./Elements/Button/Button";
 const Hero = () => {
 
     return (
-        <div
+        <section
             data-scroll
             data-scroll-section
             data-scroll-speed="-.3"
@@ -72,7 +72,7 @@ const Hero = () => {
             </div>
             <div className="absolute top-0 w-[200px] h-[200px] bg-[#CDEA68] rounded-full blur-[100px]"></div>
             <div className="absolute bottom-0 right-0 w-[200px] h-[200px] bg-[#CDEA68] rounded-full blur-[100px]"></div>
-        </div>
+        </section>
     );
 };
 

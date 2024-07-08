@@ -6,7 +6,7 @@ const Marquee = () => {
             data-scroll 
             data-scroll-section 
             data-scroll-speed=".1" 
-            className="hidden md:block w-full bg-[#004D43] rounded-tr-xl rounded-tl-xl"
+            className="hidden md:block w-full bg-[#004D43] rounded-tr-xl rounded-tl-xl text-white"
         >
             <div className="flex items-center h-auto whitespace-nowrap py-10 overflow-hidden font-Primary">
                 <motion.h1

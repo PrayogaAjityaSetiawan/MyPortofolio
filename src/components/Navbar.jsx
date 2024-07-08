@@ -6,11 +6,19 @@ const Navbar = () => {
     const [open, setOpen] = useState(false)
 
     useEffect(() => {
+        const handleScroll = () => {
             if (window.scrollY > 0) {
-                document.querySelector(".header").classList.add("backdrop-blur-sm");
+                document.querySelector(".header").classList.add("bg-[#CDEA68]");
             } else {
-                document.querySelector(".header").classList.remove("backdrop-blur-sm");
+                document.querySelector(".header").classList.remove("bg-[#CDEA68]");
             }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
 
     const pages = [
@@ -25,7 +33,7 @@ const Navbar = () => {
             animate={{y : "0"}} 
             transition={{duration : 0.5, type : "spring", stiffness : 75}} 
             className="mt-0 md:mt-3 md:px-20 z-[999]  w-full font-Primary fixed">
-                <div className="header flex justify-between items-center mx-auto md:w-[80%] py-4 px-5 bg-[#CDEA68] rounded-lg ">
+                <div className="header flex justify-between items-center mx-auto md:w-[80%] py-4 px-5 rounded-lg ">
                     <h1 className="text-xl font-bold text-zinc-900">Prayoga</h1>
                     <div onClick={() => setOpen(!open)}  className="md:hidden p-3 bg-[#004D43] rounded-full">
                         <IoMdMenu size={30} />

@@ -27,7 +27,7 @@ function App() {
   }, []);
 
   return (
-    <div ref={scrollRef} className="w-full h-min-[100vh] bg-[#F1F1F1] text-white " data-scroll-container>
+    <div ref={scrollRef} className="w-full h-min-[100vh] bg-[#F1F1F1] " data-scroll-container>
       <Navbar />
       <Hero />
       <Marquee />

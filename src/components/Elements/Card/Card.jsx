@@ -1,7 +1,8 @@
 import { GoArrowUpRight } from "react-icons/go";
 import card1 from "../../../assets/Meal Express.webp"
-import Bookshelf from "../../../assets/Bookshelf.png"
-import Weather from "../../../assets/Weather.png"
+import Bookshelf from "../../../assets/Bookshelf.webp"
+import Weather from "../../../assets/Weather.webp"
+
 
 const Card = () => {
     const cards = [
@@ -11,34 +12,46 @@ const Card = () => {
             description: "",
             image: card1,
             link: "https://prayogaajityasetiawan.github.io/Website_Menu.github.io/",
-            icon: GoArrowUpRight
+            icon: GoArrowUpRight,
+            desc: "meal express is a static landing page to display food sales"
         },
         {
             id: 2,
             title: "bookshelf app",
             image: Bookshelf,
             link: "https://bookshelf-apps-prayoga.netlify.app/",
-            icon: GoArrowUpRight
+            icon: GoArrowUpRight,
+            desc: "book management website, you can add books, mark books that have been read and those that have not been read."
         },
         {
             id: 3,
             title: "weather app",
             image: Weather,
             link: "https://weather-app-prayoga.netlify.app/",
-            icon: GoArrowUpRight
+            icon: GoArrowUpRight,
+            desc: "The weather app was created using the API from OpenWeather where we can search for the weather according to the location we are looking for."
         },
     ]
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div>
             {cards.map(card => (
-                <div key={card.id} className=" bg-white overflow-hidden rounded-2xl ">
-                    <img className="bg-cover bg-center" loading="lazy" src={card.image} alt={card.name} />
-                    <div className="flex gap-2 items-center p-5 text-zinc-700">
-                        <a href={card.link} target="_blank" className=" font-Primary capitalize text-3xl ">{card.title}</a>
-                        <card.icon size={30} />
+                <div key={card.id} className="w-full">
+                    <div className="flex flex-col gap-5 md:gap-0 md:flex-row items-center py-3 group hover:bg-[#004D43] font-Primary ">
+                    <div className="w-full md:w-[30%]">
+                        <img className="bg-cover bg-center md:w-[300px] " loading="lazy" src={card.image} alt={card.name} />
                     </div>
+                    <div className="w-full md:w-[70%] grid md:grid-cols-1 lg:grid-cols-2 gap-2 ">
+                        <div className="flex items-center gap-2">
+                            <span className="text-2xl md:text-3xl font-Primary capitalize text-zinc-500 group-hover:text-white">{card.title}</span>
+                            <GoArrowUpRight size={30} className="group-hover:text-white text-zinc-500" />
+                        </div>
+                        <p className="text-zinc-500 group-hover:text-white text-base md:text-xl text-start">{card.desc}</p>
+                    </div>
+                    </div>
+                    <div className="h-[1px] w-full bg-zinc-500"></div>
                 </div>
+                
             ))}
         </div>
     )

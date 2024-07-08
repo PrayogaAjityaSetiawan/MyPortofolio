@@ -2,31 +2,33 @@ import foto from "../assets/foto.jpg"
 
 const About = () => {
 
-    const scholls = ["Budi Luhur University", "MAN 4 Jombang", "SMPN 2 Modo"]
-
     return (
-            <div  data-scroll data-scroll-section data-scroll-speed=".1" className=" bg-[#CDEA68] rounded-tl-2xl rounded-tr-2xl md:max-h-screen ">
-                <div className="py-10 mx-5 md:mx-20 text-black">
-                    <h1 className="text-2xl md:text-4xl  font-Primary leading-normal"> Prayoga Ajitya Setiawan, a 4nd semester student of Informatics Engineering Budi Luhur University,<span className="underline decoration-wavy decoration-lime-50">I am from Lamongan, East Java,</span>  and now living in Jakarta I want to become a <span className="underline decoration-wavy decoration-[#004D43]">frondend programmer.</span></h1>
+        <section 
+        data-scroll 
+        data-scroll-section 
+        data-scroll-speed=".1" 
+        className="bg-[#CDEA68] py-4 rounded-tl-2xl rounded-tr-2xl md:max-h-screen ">
+            <div className="mx-5 md:mx-20 flex flex-col md:flex-row gap-10">
+                <div className="md:w-1/2">
+                    <img className="mx-auto md:mx-0 h-full w-[40%] object-cover bg-cover" src={foto} alt="" />
                 </div>
-                <div className="border-t-[1px] font-Primary  py-10 border-white">
-                    <div className="flex flex-col md:flex-row md:items-center gap-5 ">
-                        <div className="md:w-1/2 mx-5  md:mx-20">
-                            <h1 className="text-4xl md:text-7xl font-medium text-zinc-700 uppercase mb-5 ">Education</h1>
-                            <ul className="list-disc list-inside">
-                                {scholls.map((scholl,index )=> (
-                                    <li key={index} className="text-lg text-zinc-700 font-semibold underline decoration-wavy decoration-white">
-                                    {scholl} 
-                                    </li>
-                                ))}
-                            </ul>
+                <div className="md:w-1/2 flex flex-col justify-between">
+                    <p className="font-Primary text-zinc-500 text-base md:text-xl">Prayoga Ajitya Setiawan, a 4nd semester student of Informatics Engineering Budi Luhur University,I am from Lamongan, East Java, and now living in Jakarta I want to become a frondend programmer.</p>
+                        <div className="mt-5 md:mt-0">
+                            <span className="font-Primary font-medium text-2xl ">Tech Stack</span>
+                            <div className="grid grid-cols-3 gap-3 font-Primary capitalize">
+                                <span className="bg-[#004D43] text-white p-2 rounded-lg">html
+                                </span>
+                                <span className="bg-[#004D43] text-white p-2 rounded-lg">css</span>
+                                <span className="bg-[#004D43] text-white p-2 rounded-lg">javascript</span>
+                                <span className="bg-[#004D43] text-white p-2 rounded-lg">tailwindcss</span>
+                                <span className="bg-[#004D43] text-white p-2 rounded-lg">bootstrap</span>
+                                <span className="bg-[#004D43] text-white p-2 rounded-lg">react</span>
+                            </div>
                         </div>
-                        <div className="md:w-1/2 ">
-                            <img className="w-1/2 md:w-1/4 bg-cover mx-auto rounded-md" src={foto} alt="Prayoga Ajitya Setiawan" />
-                        </div>
-                    </div>
                 </div>
-        </div>
+            </div>
+        </section>
     )
 }
 

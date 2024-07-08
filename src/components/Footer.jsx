@@ -1,23 +1,31 @@
-import { RiInstagramFill } from "react-icons/ri";
-import { FaLinkedin, FaGithub } from "react-icons/fa6";
+import linkedin from "../assets/linkedin.svg"
+import github from "../assets/github.svg"
+import instagram from "../assets/instagram.svg"
 const Footer = () => {
 
-    const socialLinks = [
-        { name: "Instagram", icon: RiInstagramFill, url: "https://www.instagram.com/prayogaajitya/" },
-        { name: "LinkedIn", icon: FaLinkedin, url: "https://www.linkedin.com/in/prayoga-ajitya-setiawan-0229091a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-        { name: "GitHub", icon: FaGithub, url: "https://github.com/PrayogaAjityaSetiawan" },
-    ]; 
+    
     return(
-        <div  className="bg-[#F1F1F1] h-min-screen rounded-tr-xl rounded-tl-xl">
-                <div className="flex flex-col gap-1 justify-center mt-5">
-                        {socialLinks.map((socialLink, index) => (
-                            <div key={index} className="flex gap-2 items-center text-zinc-700 cursor-pointer">
-                                <socialLink.icon size={20} aria-label={socialLink.name}/>
-                            <a href={socialLink.url} target="_blank" className="capitalize text-xl font-Primary">{socialLink.name}</a>
-                            </div>
-                        ))}
-                </div>                  
-        </div>
+        <footer>
+            <div className="relative w-full min-h-screen flex justify-center items-center">
+            <div className="text-center relative">
+                <h1 className="text-5xl md:text-7xl uppercase font-bold">let's connect</h1>
+                <h1 className="text-5xl md:text-7xl uppercase font-bold">Together</h1>
+                <div className="absolute flex justify-center items-center w-full h-full top-0 left-0">
+                    <div className="backdrop-blur-lg bg-[] p-2 flex justify-center items-center rounded-sm gap-2 ">
+                        <img className="w-10" src={linkedin} alt="" />
+                        <img className="w-10" src={github} alt="" />
+                        <img className="w-10" src={instagram} alt="" />
+                    </div>
+                </div>
+            </div>
+            <div className="absolute top-0 md:left-0 w-[200px] h-[200px] bg-[#CDEA68] rounded-full blur-[100px]"></div>
+            <div className="absolute bottom-0 md:right-0 w-[200px] h-[200px] bg-[#CDEA68] rounded-full blur-[100px]"></div>
+            </div>
+            <div>
+                <h1></h1>
+            </div>
+        </footer>
+
     )
 }
 
