@@ -39,17 +39,17 @@ const Card = () => {
                 <div key={card.id} className="w-full">
                     <div className="flex flex-col gap-5 md:gap-0 md:flex-row items-center py-5 md:py-3 group hover:bg-[#004D43] font-Primary ">
                     <div className="w-full md:w-[30%]">
-                        <img className="bg-cover bg-center md:w-[300px] " loading="lazy" src={card.image} alt={card.name} />
+                        <img className="bg-cover bg-center md:w-[300px] h-auto" loading="lazy" src={card.image} alt="project" />
                     </div>
                     <div className="w-full md:w-[70%] grid md:grid-cols-1 lg:grid-cols-2 gap-2 ">
                         <div className="flex items-center gap-2">
-                            <span className="text-2xl md:text-3xl font-Primary capitalize text-zinc-500 group-hover:text-white">{card.title}</span>
-                            <GoArrowUpRight size={30} className="group-hover:text-white text-zinc-500" />
+                            <span className="text-2xl md:text-3xl font-Primary capitalize text-black group-hover:text-white">{card.title}</span>
+                            <GoArrowUpRight size={30} className="group-hover:text-white text-black" />
                         </div>
-                        <p className="text-zinc-500 group-hover:text-white text-base md:text-xl text-start">{card.desc}</p>
+                        <p className="text-black group-hover:text-white text-base md:text-xl text-start">{card.desc}</p>
                     </div>
                     </div>
-                    <div className="h-[1px] w-full bg-zinc-500"></div>
+                    <div className="h-[1px] w-full bg-black"></div>
                 </div>
                 
             ))}

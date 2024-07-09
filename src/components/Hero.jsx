@@ -9,7 +9,7 @@ const Hero = () => {
             data-scroll
             data-scroll-section
             data-scroll-speed="-.3"
-            className=" relative w-full max-h-[100vh] bg-[#F1F1F1] text-zinc-900 py-2"          
+            className=" relative w-full max-h-[100vh] bg-[#F1F1F1] text-black py-2"          
         >
             <div className="mt-52 md:mt-52 flex flex-col justify-center items-center font-Primary">
                 <div className="w-fit flex items-center h-1/3 overflow-hidden">

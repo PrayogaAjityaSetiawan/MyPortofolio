@@ -46,7 +46,7 @@ const Navbar = () => {
                 {pages.map((page) => {
                     const { id, name } = page
                     return (
-                        <motion.a  className="text-zinc-900  rounded-full" href="" key={id} >{name}</motion.a>
+                        <motion.a  className="text-black rounded-full" href="" key={id} >{name}</motion.a>
                     )
                 })}
                 </div>

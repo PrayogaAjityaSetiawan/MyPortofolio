@@ -17,7 +17,7 @@ const About = () => {
                     <img className="mx-auto md:mx-0 h-full w-[40%] object-cover bg-cover" src={foto} alt="" />
                 </div>
                 <div className="md:w-1/2 flex flex-col justify-between">
-                    <p className="font-Primary text-zinc-500 text-base md:text-xl">{textAbout}</p>
+                    <p className="font-Primary text-black text-base md:text-xl">{textAbout}</p>
                         <div className="mt-5 md:mt-0">
                             <span className="font-Primary font-medium text-2xl ">Tech Stack</span>
                             <div className="grid grid-cols-3 gap-3 font-Primary capitalize">
