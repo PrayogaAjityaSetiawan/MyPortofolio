@@ -46,7 +46,7 @@ const Navbar = () => {
             animate={{y : "0"}} 
             transition={{duration : 0.5, type : "spring", stiffness : 75}} 
             className="mt-0 md:mt-3 md:px-20 z-[999]  w-full font-Primary fixed">
-                <div className="header flex  md:justify-center items-center mx-auto md:w-1/3 py-4 px-5 md:rounded-full md:border-[3px] border-white ">
+                <div className="header flex  md:justify-center items-center mx-auto md:w-[60%] lg:w-1/3 py-4 px-5 md:rounded-full md:border-[3px] border-white ">
                     <div className="flex justify-between w-full items-center md:hidden">
                     {darkMode ? (                            
                             <MdOutlineWbSunny
