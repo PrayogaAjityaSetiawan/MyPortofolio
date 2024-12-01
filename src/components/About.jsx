@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux"
 import Marquee from "react-fast-marquee";
-import foto from "../assets/foto.jpg"
 
 const About = () => {
     const darkMode = useSelector((state) => state.darkMode.darkMode);
@@ -59,9 +58,8 @@ const About = () => {
             <div className="mx-5 md:mx-20 flex flex-col justify-between md:flex-row gap-10">
             <div
   className="md:w-1/4 h-[300px] rounded-3xl bg-cover bg-center bg-no-repeat "
-  style={{ backgroundImage: "url('./src/assets/foto.jpg')" }}
+  style={{ backgroundImage: "url('./foto.jpg')" }}
 >
-  {/* Konten opsional */}
 </div>
 
                 <div className="md:w-1/2 flex flex-col justify-between">
