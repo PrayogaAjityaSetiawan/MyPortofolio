@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Primary: ['Poppins', 'sans-serif'],
+        Primary: ['Oswald', 'sans-serif'],
         Secondary: ['Montserrat', 'sans-serif'],
       }
     },

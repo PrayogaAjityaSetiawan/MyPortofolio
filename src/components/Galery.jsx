@@ -8,7 +8,7 @@ import todolist from "../assets/todolist.webp";
 const Galery = () => {
     return (
         <div className="grid grid-cols-3 grid-rows-3 gap-1 md:mx-20 my-9">
-            <div className="overflow-hidden md:rounded-xl">
+            <div className=" overflow-hidden md:rounded-xl">
                 <img className="bg-cover object-cover h-full w-full grayscale hover:scale-105 hover:grayscale-0 overflow-hidden hover:transition-all hover:ease-in" loading="lazy" src={bookshelf} alt="bookshelf" />
             </div>
             <div className="row-span-2 overflow-hidden md:rounded-xl">
@@ -27,6 +27,7 @@ const Galery = () => {
                 <img className="bg-cover object-cover h-full w-full grayscale hover:scale-105 hover:grayscale-0 overflow-hidden hover:transition-all hover:ease-in" loading="lazy" src={pokemon} alt="pokemon" />
             </div>
         </div>
+    
     );
 };
 

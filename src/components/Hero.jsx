@@ -1,16 +1,20 @@
 import { motion } from "framer-motion";
 import { FaArrowDownLong } from "react-icons/fa6";
-import foto from "../assets/foto.jpg";
 import Button from "./Elements/Button/Button";
+import { useSelector} from "react-redux";
 const Hero = () => {
-
+    const darkMode = useSelector((state) => state.darkMode.darkMode);
     return (
-        <section
+        <section 
+            
             data-scroll
             data-scroll-section
             data-scroll-speed="-.3"
-            className=" relative w-full max-h-[100vh] bg-[#F1F1F1] text-black py-2"          
-        >
+            className= {
+                darkMode 
+                ? " relative w-full max-h-[100vh] text-white py-2" 
+                : " relative w-full max-h-[100vh] text-black py-2" 
+            }>
             <div className="mt-52 md:mt-52 flex flex-col justify-center items-center font-Primary">
                 <div className="w-fit flex items-center h-1/3 overflow-hidden">
                     <motion.h1
@@ -31,7 +35,6 @@ const Hero = () => {
                     >
                         myself, I am
                     </motion.h1>
-                    <img className="w-10" src={foto} alt="Myself" />
                 </div>
                 <div className="w-fit flex items-center h-1/3 overflow-hidden">
                     <motion.h1

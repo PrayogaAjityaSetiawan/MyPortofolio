@@ -2,8 +2,11 @@ import { motion } from "framer-motion";
 import { RxCross2 } from "react-icons/rx";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedin, FaGithub } from "react-icons/fa6";
+import { useSelector } from "react-redux";
 
 const MobileNavbar = ({ onClose }) => {
+
+    const darkMode = useSelector(state => state.darkMode.darkMode)
     
     const links = [
         { name: "Home", path: "/" },
@@ -23,11 +26,14 @@ const MobileNavbar = ({ onClose }) => {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
-            className="md:hidden h-[100vh] right-0 top-0 w-full absolute bg-white p-10 z-50"
-        >
+            className={
+                darkMode 
+                ? "md:hidden h-[100vh] right-0 top-0 w-full absolute bg-[#2a3c3b] text-white p-10 z-50" 
+                : "md:hidden h-[100vh] right-0 top-0 w-full absolute bg-white text-black  p-10 z-50"
+            }>
             <div className="flex flex-col justify-between h-full">
                 <div className="flex justify-between">
-                    <div className="flex flex-col text-black gap-5">
+                    <div className="flex flex-col gap-5">
                         {links.map((link, index) => (
                             <div key={link.name} className="overflow-hidden">
                                 <motion.a
@@ -44,7 +50,11 @@ const MobileNavbar = ({ onClose }) => {
                         ))}
                     </div>
                     <div
-                        className="text-black p-3 border-[1.5px] rounded-full cursor-pointer"
+                        className={
+                            darkMode
+                                ? "text-white p-3 border-[1.5px] rounded-full cursor-pointer"
+                                : "text-black p-3 border-[1.5px] rounded-full cursor-pointer"
+                        }
                         onClick={onClose}
                     >
                         <RxCross2 size={30} aria-label="Close Menu" />
@@ -57,7 +67,11 @@ const MobileNavbar = ({ onClose }) => {
                             href={social.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-black"
+                            className={
+                                darkMode
+                                    ? "flex items-center gap-2 text-white"
+                                    : "flex items-center gap-2 text-black"
+                            }
                         >
                             <social.icon size={20} aria-label={social.name} />
                             <h1 className="underline capitalize">{social.name}</h1>

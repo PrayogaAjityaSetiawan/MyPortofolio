@@ -2,9 +2,11 @@ import { GoArrowUpRight } from "react-icons/go";
 import card1 from "../../../assets/Meal Express.webp"
 import Bookshelf from "../../../assets/Bookshelf.webp"
 import Weather from "../../../assets/Weather.webp"
+import { useSelector } from "react-redux";
 
 
 const Card = () => {
+    const darkMode = useSelector((state) => state.darkMode.value);
     const cards = [
         {
             id: 1,
@@ -36,20 +38,24 @@ const Card = () => {
     return (
         <div>
             {cards.map(card => (
-                <div key={card.id} className="w-full">
+                <div key={card.id} className={
+                        darkMode 
+                        ? "w-full text-white" 
+                        : "w-full"
+                    }>
                     <div className="flex flex-col gap-5 md:gap-0 md:flex-row items-center py-5 md:py-3 group hover:bg-[#004D43] font-Primary ">
                     <div className="w-full md:w-[30%]">
-                        <img className="bg-cover bg-center md:w-[300px] h-auto" loading="lazy" src={card.image} alt="project" />
+                        <img className="bg-cover bg-center md:w-[300px] h-auto rounded-xl" loading="lazy" src={card.image} alt="project" />
                     </div>
                     <div className="w-full md:w-[70%] grid md:grid-cols-1 lg:grid-cols-2 gap-2 ">
                         <div className="flex items-center gap-2">
-                            <span className="text-2xl md:text-3xl font-Primary capitalize text-black group-hover:text-white">{card.title}</span>
-                            <GoArrowUpRight size={30} className="group-hover:text-white text-black" />
+                            <span className="text-2xl md:text-3xl font-Primary capitalize  group-hover:text-white">{card.title}</span>
+                            <GoArrowUpRight size={30} className="group-hover:text-white " />
                         </div>
-                        <p className="text-black group-hover:text-white text-base md:text-xl text-start">{card.desc}</p>
+                        <p className=" group-hover:text-white text-base md:text-xl text-start">{card.desc}</p>
                     </div>
                     </div>
-                    <div className="h-[1px] w-full bg-black"></div>
+                    <div className="h-[1px] w-full bg-white"></div>
                 </div>
                 
             ))}
